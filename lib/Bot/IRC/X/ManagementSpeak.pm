@@ -44,7 +44,13 @@ __END__
     use Bot::IRC;
 
     Bot::IRC->new(
-        connect => { server => 'irc.perl.org' },
+        connect => {
+        server => 'irc.kiwichat.eu.org',
+        port   => '6667',
+        nick   => 'iBOT',
+        name   => 'ShowChat iBot',
+        join   => '#showchat',
+        },
         plugins => ['ManagementSpeak'],
     )->run;
 
